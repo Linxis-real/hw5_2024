@@ -48,6 +48,18 @@ header {
     align-items: center;
 }
 
+.gallery img {
+    border: 10px solid #50c7c7;
+    margin: 10px;
+    width: 300px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 /*Screen size 900px */
 
 @media screen and (min-width:900px) {
