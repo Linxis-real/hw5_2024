@@ -11,6 +11,11 @@ header {
     align-items: center;
 }
 
+/* Within 1500px, nothing happens, but when it goes beyond 1500px, if this line of text is not centered, it will go to the left. It's just looked like it's centered, but it's not. Therefore, I centered it. */
+.about p {
+    text-align: center;
+}
+
 
 /* Nav Links */
 .nav_links {
@@ -20,6 +25,7 @@ header {
 }
 
 .nav_links li a {
+    /* I like this color better */
     color: #45ADAD;
 }
 
@@ -60,16 +66,87 @@ header {
     justify-content: center;
 }
 
-/*Screen size 900px */
+/*Screen size 900px and above*/
 
 @media screen and (min-width:900px) {
-    
+    header {
+        display: flex;
+        flex-direction: row;
+        /* To make logo image as left as possible and nav links as right as possible. */
+        justify-content: space-between;
+        /* Keeps header at the top */
+        position: sticky;
+        /* Where to be sticky */
+        top: 0;
+    }
+
+    .nav_links {
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* .pricing {
+        display: flex;
+        flex-direction: row;
+    } */
+     /* .pricing settings inherited to control the layout of cards. */
+
+    .card {
+        flex-basis: 275px;
+    }
+
+
 }
+
+/* Logo Animation Here */
 
 @media all and (prefers-reduced-motion: reduce) {
     
 }
 
 @media print {
-    
+    body {
+        font-family: Arial, Helvetica;
+        background-image: none;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav_links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .nav_links li {
+        margin: 0 80px; /* Adjusts space between each link */
+    }
+
+    .pricing {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+    }
+
+    .card {
+        border: 2px solid #45ADDD;
+        flex-basis: 220px;
+    }
+
+    .card ul li:nth-child(2n)::after {
+        content: "👍 "; /* Adds thumbs-up icon */
+        margin-right: 5px;
+        margin-bottom: 5px;
+        font-size: 1em;
+        align-items: center;
+    }
+
+
+/* No gallery visible */
+    .gallery, #gallery {
+        display: none;
+    }
 }
