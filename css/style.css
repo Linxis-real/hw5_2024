@@ -74,10 +74,12 @@ header {
         flex-direction: row;
         /* To make logo image as left as possible and nav links as right as possible. */
         justify-content: space-between;
-        /* Keeps header at the top */
-        position: sticky;
-        /* Where to be sticky */
-        top: 0;
+    }
+
+    body>header {
+        position: sticky; /* Set the navbar to fixed position */
+        top: 0; /* Position the navbar at the top of the page */
+        /* width: 100%; Full width */
     }
 
     .nav_links {
@@ -143,7 +145,8 @@ header img {
     }
 
     .card ul li:nth-child(2n)::after {
-        content: "👍 "; /* Adds thumbs-up icon */
+        /* Adds thumbs-up icon */
+        content: "👍 ";
         margin-right: 5px;
         margin-bottom: 5px;
         font-size: 1em;
