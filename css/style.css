@@ -26,12 +26,12 @@ header {
 
 .nav_links li a {
     /* I like this color better */
-    color: #45ADAD;
+    color: #0d7e7e;
 }
 
 /* Make sure links wont change color even after visiting */
 .nav_links li a:visited {
-    color: #45ADAD;
+    color: #0d7e7e;
 }
 
 .card>header {
