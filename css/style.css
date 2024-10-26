@@ -85,12 +85,7 @@ header {
         flex-direction: row;
     }
 
-    /* .pricing {
-        display: flex;
-        flex-direction: row;
-    } */
-     /* .pricing settings inherited to control the layout of cards. */
-
+/* .pricing settings inherited to control the layout of cards. */
     .card {
         flex-basis: 275px;
     }
@@ -99,9 +94,19 @@ header {
 }
 
 /* Logo Animation Here */
+header img {
+    animation: logomove 5s;
+}
+
+@keyframes logomove {
+    from {width: 25px; color: rgba(0, 0, 0, 0);}
+    to {width: 475px; color: rgba(0, 0, 0, 1);}
+}
 
 @media all and (prefers-reduced-motion: reduce) {
-    
+    header img {
+        animation: none;
+    }
 }
 
 @media print {
@@ -128,12 +133,13 @@ header {
     .pricing {
         display: flex;
         flex-direction: row;
-        align-items: baseline;
+        align-items: flex-end;
+        flex-wrap: nowrap;
     }
 
     .card {
         border: 2px solid #45ADDD;
-        flex-basis: 220px;
+        flex-basis: 325px;
     }
 
     .card ul li:nth-child(2n)::after {
